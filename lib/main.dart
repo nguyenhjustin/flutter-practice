@@ -4,14 +4,35 @@ void main() {
   runApp(MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('This is a title!'),
+          title: Text(
+            'This is a title!',
+            style: TextStyle(
+              color: Colors.blue[900],
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           centerTitle: true,
+          backgroundColor: Colors.greenAccent,
         ),
         body: Center(
-          child: Text('Hello World!'),
+          child: Text(
+            'Hello World!',
+            style: TextStyle(
+              color: Colors.blueAccent,
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold
+            ),
+          ),
         ),
         floatingActionButton: FloatingActionButton(
-          child: Text('Click Me!'),
+          onPressed: () {},
+          child: Text(
+            'Click Me!',
+            style: TextStyle(
+                color: Colors.blue[900],
+            ),
+          ),
+          backgroundColor: Colors.greenAccent,
         ),
       ),
   ));
