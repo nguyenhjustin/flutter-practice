@@ -22,13 +22,9 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.greenAccent,
       ),
       body: Center(
-        child: Text(
-          'Hello World!',
-          style: TextStyle(
-              color: Colors.blueAccent,
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold
-          ),
+        child: Image.network(
+          'https://bleedingcool.com/wp-content/uploads/2020/07/STL159511.jpg',
+          fit: BoxFit.fill,
         ),
       ),
       floatingActionButton: FloatingActionButton(
