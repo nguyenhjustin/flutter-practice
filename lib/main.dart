@@ -22,9 +22,22 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.greenAccent,
       ),
       body: Center(
-        child: Image.network(
-          'https://bleedingcool.com/wp-content/uploads/2020/07/STL159511.jpg',
-          fit: BoxFit.fill,
+        child: RaisedButton.icon(
+          onPressed: () {
+            print('Finish Him!');
+          },
+          icon: Icon(
+            Icons.sports_kabaddi,
+            color: Colors.white,
+          ),
+          label: Text(
+            'Mortal Kombat!',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+          color: Colors.greenAccent,
         ),
       ),
       floatingActionButton: FloatingActionButton(
