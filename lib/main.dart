@@ -21,24 +21,11 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
       ),
-      body: Center(
-        child: RaisedButton.icon(
-          onPressed: () {
-            print('Finish Him!');
-          },
-          icon: Icon(
-            Icons.sports_kabaddi,
-            color: Colors.white,
-          ),
-          label: Text(
-            'Mortal Kombat!',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-            ),
-          ),
-          color: Colors.greenAccent,
-        ),
+      body: Container(
+        color: Colors.greenAccent[100],
+        child: Text('Time to Duel!'),
+        padding: EdgeInsets.all(10),
+        margin: EdgeInsets.all(30),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
