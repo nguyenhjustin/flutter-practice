@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,11 +22,23 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
       ),
-      body: Container(
-        color: Colors.greenAccent[100],
-        child: Text('Time to Duel!'),
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.all(30),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text('How you like that!?'),
+          FlatButton.icon(
+            onPressed: () {},
+            icon: Icon(Icons.attach_money),
+            label: Text('G!'),
+            color: Colors.cyan,
+          ),
+          Container(
+            child: Text('Time to duel!'),
+            color: Colors.amber,
+            padding: EdgeInsets.all(10),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
