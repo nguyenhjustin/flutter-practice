@@ -22,10 +22,17 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Hello'),
+              Text('World!'),
+            ],
+          ),
           Text('How you like that!?'),
           FlatButton.icon(
             onPressed: () {},
