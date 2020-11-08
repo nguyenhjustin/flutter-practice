@@ -22,28 +22,37 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Hello'),
-              Text('World!'),
-            ],
+          Expanded(
+            flex: 2,
+            child: Image.network(
+              'https://bleedingcool.com/wp-content/uploads/2020/07/STL159511.jpg',
+            )
           ),
-          Text('How you like that!?'),
-          FlatButton.icon(
-            onPressed: () {},
-            icon: Icon(Icons.attach_money),
-            label: Text('G!'),
-            color: Colors.cyan,
+          Expanded(
+            flex: 5,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.cyan,
+              child: Text('Hey'),
+            ),
           ),
-          Container(
-            child: Text('Time to duel!'),
-            color: Colors.amber,
-            padding: EdgeInsets.all(10),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.pink,
+              child: Text('now'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.amber,
+              child: Text('rockstar!'),
+            ),
           ),
         ],
       ),
