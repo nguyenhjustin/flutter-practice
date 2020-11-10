@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-      home: Home(),
+    home: Home(),
   ));
 }
 
@@ -11,60 +11,75 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
         title: Text(
-          'This is a title!',
+          'Ninja ID',
           style: TextStyle(
-            color: Colors.blue[900],
-            fontWeight: FontWeight.bold,
+            color: Colors.yellow,
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.grey[600],
+        elevation: 0,
       ),
-      body: Row(
-        children: [
-          Expanded(
-            flex: 2,
-            child: Image.network(
-              'https://bleedingcool.com/wp-content/uploads/2020/07/STL159511.jpg',
-            )
-          ),
-          Expanded(
-            flex: 5,
-            child: Container(
-              padding: EdgeInsets.all(20),
-              color: Colors.cyan,
-              child: Text('Hey'),
+      body: Padding(
+        padding: const EdgeInsets.all(30),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                ),
+              ],
             ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(20),
-              color: Colors.pink,
-              child: Text('now'),
+            Container(
+              padding: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              margin: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              child: Text(
+                'Name',
+                style: TextStyle(
+                  color: Colors.grey[400],
+                ),
+              ),
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(20),
-              color: Colors.amber,
-              child: Text('rockstar!'),
+            Container(
+              padding: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              margin: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              child: Text(
+                'Ice Bear',
+                style: TextStyle(
+                  color: Colors.yellow,
+                  fontSize: 30,
+                ),
+              ),
             ),
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text(
-          'Click Me!',
-          style: TextStyle(
-            color: Colors.blue[900],
-          ),
+            Container(
+              padding: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              margin: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              child: Text(
+                'Level',
+                style: TextStyle(
+                  color: Colors.grey[400],
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              margin: EdgeInsets.fromLTRB(1, 1, 1, 1),
+              child: Text(
+                '13',
+                style: TextStyle(
+                  color: Colors.yellow,
+                  fontSize: 30,
+                ),
+              ),
+            ),
+          ],
         ),
-        backgroundColor: Colors.greenAccent,
       ),
     );
   }
