@@ -28,13 +28,11 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                ),
-              ],
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/avatar.jpg'),
+                radius: 50,
+              ),
             ),
             Container(
               padding: EdgeInsets.fromLTRB(1, 1, 1, 1),
